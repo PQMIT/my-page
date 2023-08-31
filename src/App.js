@@ -1,21 +1,34 @@
 import "./App.css";
+import { SignupForm } from "./getIP";
+import { useState } from "react";
+import React from "react";
 
 function App() {
+  const directTelegram = () => {
+    window.open("https://t.me/+qtoHVgMk2tE4ZjFl", "_blank");
+  };
+  const [ip, setIp] = useState("");
+  const childToParent = (childdata) => {
+    setIp(childdata);
+    console.log(childdata + "childdata");
+    console.log(ip.ipv4 + "ipv4 from parent");
+  };
+
   return (
-    <main className="container">
-      <strong>Lưu ý:</strong> Mỗi thiết bị sẽ chỉ vượt được 1 link/1 nhiệm vụ/1
-      ngày
+    <div className="main container text-center">
+      <strong>Lưu ý:</strong> Mỗi thiết bị sẽ chỉ vượt được 1 link/ lần/ ngày
       <p />
+      <SignupForm childToParent={childToParent} />
       <hr />
-      <div className="row nhiemvu text-center ">
+      <div className="row text-center ">
         <div className="col-md-3 col-sm-6 col-6 py-1">
           <a
-            href="https://dilink.net/DoCxV"
+            href="https://dilink.net/r60l"
             target="_blank"
             rel="noreferrer"
             className="btn btn-mod btn-border btn-medium animation-one"
           >
-            <span>Dilink</span>
+            <span>Dilink - 300đ</span>
           </a>
         </div>
         <div className="col-md-3 col-sm-6 col-6 py-1">
@@ -25,7 +38,7 @@ function App() {
             rel="noreferrer"
             className="btn btn-mod btn-border btn-medium animation-one"
           >
-            <span>Traffic123</span>
+            <span>Traffic123 - 300đ</span>
           </a>
         </div>
         <div className="col-md-3 col-sm-6 col-6 py-1">
@@ -35,101 +48,38 @@ function App() {
             rel="noreferrer"
             className="btn btn-mod btn-border btn-medium animation-one"
           >
-            <span>Beelink 1</span>
+            <span>Beelink - 300đ</span>
           </a>
         </div>
         <div className="col-md-3 col-sm-6 col-6 py-1">
           <a
-            href="https://beelink.life/qejrwo"
+            href="https://my.trafficuser.com/sDii"
             target="_blank"
             rel="noreferrer"
             className="btn btn-mod btn-border btn-medium animation-one"
           >
-            <span>Beelink 2</span>
-          </a>
-        </div>
-        <hr />
-        <div className="col-md-3 col-sm-4 col-4 py-1">
-          <a
-            href="https://taixiugames.com/agency?id=41218&platform=sport"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-mod btn-border btn-medium animation-one"
-          >
-            <span>Sport</span>
-          </a>
-        </div>
-        <div className="col-md-3 col-sm-4 col-4 py-1">
-          <a
-            href="https://taixiugames.com/agency?id=95396&platform=casino"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-mod btn-border btn-medium animation-one"
-          >
-            <span>Casino</span>
-          </a>
-        </div>
-        <div className="col-md-3 col-sm-4 col-4 py-1">
-          <a
-            href="https://taixiugames.com/agency?id=60272&platform=Game3D"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-mod btn-border btn-medium animation-one"
-          >
-            <span>Game3d</span>
-          </a>
-        </div>
-        <div className="col-md-3 col-sm-4 col-4 py-1">
-          <a
-            href="https://taixiugames.com/agency?id=18225&platform=banca"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-mod btn-border btn-medium animation-one"
-          >
-            <span>Bắn cá</span>
-          </a>
-        </div>
-        <div className="col-md-3 col-sm-4 col-4 py-1">
-          <a
-            href="https://taixiugames.com/agency?id=39563&platform=nohu"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-mod btn-border btn-medium animation-one"
-          >
-            <span>Nổ hũ</span>
-          </a>
-        </div>
-        <div className="col-md-3 col-sm-4 col-4 py-1">
-          <a
-            href="https://taixiugames.com/agency?id=94015&platform=xoso"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-mod btn-border btn-medium animation-one"
-          >
-            <span>Xổ số</span>
+            <span>Traffic User - 200đ</span>
           </a>
         </div>
       </div>
-      <div className="container">
-        <i className="fa-brands fa-facebook-messenger" />
-        <i className="fa-brands fa-telegram" />
-        <i className="fas fa-camera" />
-        <span className="fas fa-camera" />
-      </div>
-      <hr />
+      <hr></hr>
       <div className="thongbao">
         <div className="container">
           <h3>Thông báo :</h3>
           <p>
-            Sau khi làm xong 1 nhiệm vụ hãy chụp màn hình gửi Admin để nhận
-            tiền. 300đ/1nvu sẽ thanh toán ngay khi đang admin online. Khi Nhận
-            Nhiệm Vụ mà chuyển hướng ngay tức là hết Nhiệm Vụ. Nếu bạn đã làm
-            nhiệm vụ của 1 web (ví dụ Dilink) thì không nên làm nhiệm vụ đó nữa
-            mà hãy làm nhiệm vụ khác, vì làm sẽ không tính view &amp; tính tiền.
+            Làm xong nhiệm vụ hãy chụp màn hình gửi page để Admin check. Khi
+            nhận Nhiệm vụ mà chuyển hướng ngay tức là hết Nhiệm vụ.
           </p>
         </div>
       </div>
-    </main>
+      <hr></hr>
+      <div className="container text-center">
+        <button className="btn-send btn-primary" onClick={directTelegram}>
+          Send to Telegram
+        </button>
+      </div>
+      
+    </div>
   );
 }
 
